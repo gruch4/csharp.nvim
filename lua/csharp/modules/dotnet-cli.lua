@@ -44,7 +44,7 @@ function M.run(options)
 
   logger.debug("Executing: " .. command, { feature = "dotnet-cli" })
   local current_window = vim.api.nvim_get_current_win()
-  vim.cmd("split | term " .. command)
+  vim.cmd("term " .. command)
   vim.api.nvim_set_current_win(current_window)
 end
 
